@@ -46,9 +46,21 @@ namespace projeto_autenticacao
             }
         }
 
+        void fecharTodos()
+        {
+            foreach (Form childForm in MdiChildren)
+            {
+                childForm.Close();
+            }
+        }
+
         private void FormMDI_Load(object sender, EventArgs e)
         {
-            
+            //obter hora atual
+            DateTime horarioAtual = DateTime.Now;
+
+            //formatar e exibir a hora ("hh:mm") = formato inglês
+            label1.Text = horarioAtual.ToString("HH:mm");
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
@@ -59,8 +71,15 @@ namespace projeto_autenticacao
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             FormLogin formLogin = new FormLogin();
+            formLogin.FormClosed += formLogin_FormClosed;
             formLogin.MdiParent = this;
             formLogin.Show();
+        }
+
+        private void formLogin_FormClosed(object sender, EventArgs e)
+        {
+            FormLogin formLogin = (FormLogin)sender;
+            userAutenticado = formLogin.userAutenticado;
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -134,6 +153,25 @@ namespace projeto_autenticacao
         }
 
         private void vendasMensaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //CAMPO INUTIL
+        }
+
+        private void btnLOGOUT_Click(object sender, EventArgs e)
+        {
+            if (userAutenticado != false)
+            {
+                MessageBox.Show("Logout realizado com sucesso.", "Logout status", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                userAutenticado = false;
+                fecharTodos();
+            }
+            else
+            {
+                MessageBox.Show("ERRO! Não fez login.", "Logout status", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
             //CAMPO INUTIL
         }

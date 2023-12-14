@@ -66,6 +66,8 @@
             this.btnLOGOUT = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -159,42 +161,42 @@
             // listagemToolStripMenuItem
             // 
             this.listagemToolStripMenuItem.Name = "listagemToolStripMenuItem";
-            this.listagemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listagemToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.listagemToolStripMenuItem.Text = "Listagem";
             this.listagemToolStripMenuItem.Click += new System.EventHandler(this.listagemToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(127, 6);
             // 
             // novoToolStripMenuItem
             // 
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.novoToolStripMenuItem.Text = "Novo";
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // apagarToolStripMenuItem
             // 
             this.apagarToolStripMenuItem.Name = "apagarToolStripMenuItem";
-            this.apagarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.apagarToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.apagarToolStripMenuItem.Text = "Apagar";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(127, 6);
             // 
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
@@ -211,20 +213,20 @@
             // registarToolStripMenuItem
             // 
             this.registarToolStripMenuItem.Name = "registarToolStripMenuItem";
-            this.registarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registarToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.registarToolStripMenuItem.Text = "Registar";
             this.registarToolStripMenuItem.Click += new System.EventHandler(this.registarToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // vendasMensaisToolStripMenuItem
             // 
             this.vendasMensaisToolStripMenuItem.Name = "vendasMensaisToolStripMenuItem";
-            this.vendasMensaisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vendasMensaisToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.vendasMensaisToolStripMenuItem.Text = "Vendas mensais";
             this.vendasMensaisToolStripMenuItem.Click += new System.EventHandler(this.vendasMensaisToolStripMenuItem_Click);
             // 
@@ -240,14 +242,14 @@
             // registoDeAvariasToolStripMenuItem
             // 
             this.registoDeAvariasToolStripMenuItem.Name = "registoDeAvariasToolStripMenuItem";
-            this.registoDeAvariasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registoDeAvariasToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.registoDeAvariasToolStripMenuItem.Text = "Registo de avarias";
             this.registoDeAvariasToolStripMenuItem.Click += new System.EventHandler(this.registoDeAvariasToolStripMenuItem_Click);
             // 
             // consultaGeralToolStripMenuItem
             // 
             this.consultaGeralToolStripMenuItem.Name = "consultaGeralToolStripMenuItem";
-            this.consultaGeralToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaGeralToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.consultaGeralToolStripMenuItem.Text = "Consulta geral";
             this.consultaGeralToolStripMenuItem.Click += new System.EventHandler(this.consultaGeralToolStripMenuItem_Click);
             // 
@@ -366,16 +368,18 @@
             // 
             // btnLOGOUT
             // 
+            this.btnLOGOUT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLOGOUT.Location = new System.Drawing.Point(63, 473);
             this.btnLOGOUT.Name = "btnLOGOUT";
             this.btnLOGOUT.Size = new System.Drawing.Size(109, 36);
             this.btnLOGOUT.TabIndex = 5;
             this.btnLOGOUT.Text = "Logout";
             this.btnLOGOUT.UseVisualStyleBackColor = true;
+            this.btnLOGOUT.Click += new System.EventHandler(this.btnLOGOUT_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(63, 68);
+            this.pictureBox1.Location = new System.Drawing.Point(63, 62);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(136, 109);
             this.pictureBox1.TabIndex = 1;
@@ -388,12 +392,36 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.AutoSize = false;
+            this.statusStrip1.Location = new System.Drawing.Point(266, 518);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
+            this.statusStrip1.Size = new System.Drawing.Size(922, 28);
+            this.statusStrip1.TabIndex = 5;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1125, 522);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 18);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FormMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1188, 546);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
@@ -453,6 +481,8 @@
         public System.Windows.Forms.ToolStripMenuItem registoDeAvariasToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem consultaGeralToolStripMenuItem;
         public System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

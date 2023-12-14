@@ -42,7 +42,7 @@ namespace projeto_autenticacao
                 if (textBox1.Text.Equals(user) && textBox2.Text.Equals(pass) && textBoxNome.Text.Equals(nome))
                 {
                     //sucesso
-                    MessageBox.Show("Login realizado com sucesso!", "Login status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Login realizado com sucesso. Bem vindo Paulo Barreira!", "Login status", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     userAutenticado = true;
                     this.Close();
                 }
