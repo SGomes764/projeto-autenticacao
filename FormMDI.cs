@@ -12,7 +12,8 @@ namespace projeto_autenticacao
 {
     public partial class FormMDI : Form
     {
-        public bool userAutenticado = false;
+        public bool userAutenticado { get; private set; }
+        //public bool userAutenticado = false;
         public FormMDI()
         {
             InitializeComponent();
@@ -60,11 +61,6 @@ namespace projeto_autenticacao
             FormLogin formLogin = new FormLogin();
             formLogin.MdiParent = this;
             formLogin.Show();
-
-            if (formLogin.userAutenticado)
-            {
-                userAutenticado = true;
-            }
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

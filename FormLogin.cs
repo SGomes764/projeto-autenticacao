@@ -12,7 +12,8 @@ namespace projeto_autenticacao
 {
     public partial class FormLogin : Form
     {
-        public bool userAutenticado {  get; private set; }
+        public bool userAutenticado = false;
+        //public bool userAutenticado {  get; private set; }
         public FormLogin()
         {
             InitializeComponent();
@@ -40,17 +41,20 @@ namespace projeto_autenticacao
                 //compara os dados de login
                 if (textBox1.Text.Equals(user) && textBox2.Text.Equals(pass) && textBoxNome.Text.Equals(nome))
                 {
+                    //sucesso
                     MessageBox.Show("Login realizado com sucesso!", "Login status", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     userAutenticado = true;
                     this.Close();
                 }
                 else
                 {
+                    //falha
                     MessageBox.Show("Falha na autenticação! Dados de login errados.", "Login status", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
+                //falha
                 MessageBox.Show("ERRO! Campos de introdução vazios.", "Campos obrigatórios", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //MessageBox.Show("Falha na autenticação! Dados de login errados.", "Login status", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
